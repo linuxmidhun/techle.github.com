@@ -1,0 +1,196 @@
+<html>
+<head>
+    <title>techle|Software development|Web Development|Mobile Development</title>
+    <link rel="stylesheet" href="theme/global.css" />
+	<script type="text/javascript" src="js/jquery-1.4.1.min.js">
+	</script>
+	<script type="text/javascript">
+		function hideall(){
+			//$('#index').hide();
+			//$('#service').hide();
+			//$('#team').hide();
+			//$('#reach').hide();
+			$('#index').appendTo('#down').hide('slow').show('slow');
+			$('.serveContent').hide();
+			$('#service').appendTo('#down').hide('slow').show('slow');
+			//$('#team').appendTo('#down').hide().show('fast');
+			$('#reach').appendTo('#down').hide('slow').show('slow');
+		}
+		function removeLinks(){
+			$('#reachlnk').removeClass('topLinkActive').addClass('topLink');
+			$('#servicelnk').removeClass('topLinkActive').addClass('topLink');
+			$('#teamlnk').removeClass('topLinkActive').addClass('topLink');
+		}
+		function index(){
+			hideall();
+			removeLinks();
+			//$('#index').show('slow');
+			$('#index').appendTo('#content').hide().show('slow');
+		}
+		function reach(){
+			hideall();
+			//$('#reach').show('slow');
+			$('#reach').appendTo('#content').hide().show('slow');
+			removeLinks();
+			$('#reachlnk').removeClass('topLink').addClass('topLinkActive');
+		}
+		function service(){
+			hideall();
+			//$('#service').show('slow');
+			$('#service').appendTo('#content').hide().show('slow');
+			removeLinks();
+			$('#servicelnk').removeClass('topLink').addClass('topLinkActive');
+			//showServe();
+		}
+		function team(){
+			hideall();
+			//$('#team').show('slow');
+			$('#team').appendTo('#content').hide().show('slow');
+			removeLinks();
+			$('#teamlnk').removeClass('topLink').addClass('topLinkActive');
+		}
+		//$('.serve').click(function (e){
+			//$('.serveContent').show('slow');
+		//});
+		function showServe(){
+			$('.serveContent').hide('slow').show('slow');
+		}
+	</script>
+</head>
+<body>
+    <center>
+        <div id="outer-wrapper">
+            <div style="text-align: left;background:white;">
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="index()" class="head"><img src="images/head.png"
+                    alt="techle" width="300px" /></a>
+            </div>
+            <div id="linkBar">
+                <a href="#" id="servicelnk" onclick="service()" class="topLink">&nbsp;services&nbsp;</a>
+				<!--a href="#" id="teamlnk" onclick="team()" class="topLink">&nbsp;the team&nbsp;</a-->
+				<a href="#" id="reachlnk" onclick="reach()" class="topLink">&nbsp;reach us&nbsp;</a>
+            </div>
+			<div id="content">
+			</div>
+			<br />
+            <div id="down" class="hidden">
+                <center>
+                    <div id="index" class="pages">
+						<center>
+						<div style="width:80%">
+							<p style="text-indent: 50Px; font-size: 24px; font: verdana; text-align: left; color: #424f71;">
+								<span style="color: blue;">techle</span> is a team of programmers and designers who got extreme talent in
+								developing industry best solutions for your technology needs.</p>
+						</div>
+						</center>
+                    </div>
+					<div id="service" class="pages">
+						<div style="text-align: left; text-indent: 5px; background: white;">
+							<img src="images/weDo.jpg" alt="What we Do?" height="35px" />
+						</div>
+						<br />
+						<div style="width: 100%;">
+							<table cellpadding="0" cellspacing="0" width="100%">
+								<tbody>
+									<tr>
+										<td valign="top" align="center" style="width: 25%;">
+											<br />
+											<div class="serve" onclick="showServe()">
+												app design
+												<br />
+												<img src="images/icon-web.png" alt="" />
+												<br /><br />
+											</div>
+											<br />
+										</td>
+										<td valign="top" align="center" style="width: 25%; border-left: 1px dotted silver;">
+											<br />
+											<div class="serve" onclick="showServe()">
+												app development
+												<br />
+												<img src="images/icon-develop.png" alt="" />
+												<br /><br />
+											</div>
+											<br />
+										</td>
+										<td valign="top" align="center" style="width: 25%; border-left: 1px dotted silver;">
+											<br />
+											<div class="serve" onclick="showServe()">
+												SEO
+												<br />
+												<img src="images/icon-seo.png" alt="" />
+												<br /><br />
+											</div>
+											<br />
+										</td>
+										<td valign="top" align="center" style="width: 25%; border-left: 1px dotted silver;">
+											<br />
+											<div class="serve" onclick="showServe()">
+												game development
+												<br />
+												<img src="images/game-icon.png" alt="" />
+												<br /><br />
+											</div>
+											<br />
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						<br />
+						<center>
+							<div class="serveContent">
+							</div>
+						</center>
+						</div>
+					</div>
+					<!--div id="team" class="pages" style="height:100px;display:none;">
+					</div-->
+                    <div id="reach" class="pages">
+                        <span class="titles">Quik Contact</span>
+                        <div style="height: 10px;">
+                        </div>
+                        <table cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                                <tr>
+                                    <td valign="top" align="left" style="width: 50%;">
+                                        <div style="border-left: 5px ridge lightskyblue; margin-left: 5px;">
+                                            <div class="contacts">
+                                                <div style="height: 5px;">
+                                                </div>
+                                                <span>+91-9747</span>&nbsp;<span>683089</span>&nbsp;&nbsp;<img src="images/phone2.jpg"
+                                                    alt="" />
+                                                <div style="height: 2px;">
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <div class="contacts">
+                                                <div style="height: 5px;">
+                                                </div>
+                                                <img src="images/email.png" alt="" />&nbsp;&nbsp;linuxmidhun@gmail.com
+                                                <div style="height: 2px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td valign="top" align="left" style="width: 50%;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </center>
+				<div id="hideTop" class="hiddenTop">
+				</div>
+            </div>
+			<br /><br />
+            <img src="images/filler.png" width="100%" alt="" height="5" />
+            <div id="btmDiv">
+                Copyright © <font color="gray">techle</font> All Rights Reserved
+            </div>
+			<script type="text/javascript">
+				index();
+			</script>
+        </div>
+    </center>
+</body>
+</html>
